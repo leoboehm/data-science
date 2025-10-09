@@ -61,6 +61,7 @@ def main():
     computer_symbol = "O" if player_symbol == "X" else "X"
     current_turn = "Player"
     
+    # print available positions
     print("The board looks like this. Place your symbol in a field by choosing a number between 1 and 9.")
     display_board([i for i in range(9)])
     print("Ready? Let's play!")
