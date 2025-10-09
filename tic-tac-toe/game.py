@@ -51,7 +51,7 @@ def check_winner(board, symbol):
 
 def main():
     board = [" " for _ in range(9)]
-    display_board(board)
+    print("Ready for a game of Tic-Tac-Toe?")
 
     # choose symbol
     player_symbol = input("Choose your symbol (X/O): ").upper()
@@ -60,6 +60,10 @@ def main():
 
     computer_symbol = "O" if player_symbol == "X" else "X"
     current_turn = "Player"
+    
+    print("The board looks like this. Place your symbol in a field by choosing a number between 1 and 9.")
+    display_board([i for i in range(9)])
+    print("Ready? Let's play!")
 
     while True:
         # Player move
