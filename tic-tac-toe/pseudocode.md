@@ -53,7 +53,7 @@ function get_computer_move(board):
     return random choice from empty_positions
 ```
 ### Alternative: Choose computer move out of prededefined winning combinations
-````
+```
 function get_computer_move(board, computer_symbol, player_symbol):
     winning_combinations = [
         [0,1,2], [3,4,5], [6,7,8],
