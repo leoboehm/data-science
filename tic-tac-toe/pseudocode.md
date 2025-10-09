@@ -61,29 +61,21 @@ function get_computer_move(board, computer_symbol, player_symbol):
         [0,4,8], [2,4,6]
     ]
     
-    # 1. Try to win
+    # Try to win
     for each combo in winning_combinations:
         cells = values of board at combo positions
         if cells contain 2 of computer_symbol and 1 empty space:
             return position of empty space in combo
     
-    # 2. Try to block player's win
+    # Try to block player's win
     for each combo in winning_combinations:
         cells = values of board at combo positions
         if cells contain 2 of player_symbol and 1 empty space:
             return position of empty space in combo
     
-    # 3. Choose best strategic position
-    if center position (index 4) is empty:
-        return 4
-    
-    for each corner in [0, 2, 6, 8]:
-        if board[corner] is empty:
-            return corner
-    
-    for each side in [1, 3, 5, 7]:
-        if board[side] is empty:
-            return side
+    # Choose random position
+    empty_positions = indices of board where cell == " "
+    return random choice from empty_positions
 ```
 
 ## Check for winner
